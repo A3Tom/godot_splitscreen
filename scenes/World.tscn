@@ -1,0 +1,32 @@
+[gd_scene load_steps=6 format=3 uid="uid://dhnbsresxowoj"]
+
+[ext_resource type="Texture2D" uid="uid://chx2n1cdgweon" path="res://Assets/Skybox/kloppenheim_06_puresky.jpg" id="1_lxeyr"]
+[ext_resource type="PackedScene" uid="uid://dcly6o53o5qrj" path="res://scenes/CrashTestLevel.tscn" id="2_670ub"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_3cxkq"]
+panorama = ExtResource("1_lxeyr")
+
+[sub_resource type="Sky" id="Sky_warn7"]
+sky_material = SubResource("PanoramaSkyMaterial_3cxkq")
+
+[sub_resource type="Environment" id="Environment_q2qn7"]
+background_mode = 2
+sky = SubResource("Sky_warn7")
+tonemap_mode = 2
+glow_enabled = true
+
+[node name="World" type="Node3D"]
+
+[node name="Environment" type="Node3D" parent="."]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="Environment"]
+environment = SubResource("Environment_q2qn7")
+
+[node name="CrashTestLevel" parent="Environment" instance=ExtResource("2_670ub")]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Environment"]
+transform = Transform3D(-0.158455, 0.717982, -0.677786, -0.0678969, 0.676911, 0.732927, 0.985029, 0.162156, -0.0585113, -7.15021, 6.57327, 2.69663)
+light_volumetric_fog_energy = 2.0
+shadow_enabled = true
+
+[node name="Node3D" type="Node3D" parent="."]

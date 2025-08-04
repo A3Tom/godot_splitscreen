@@ -1,0 +1,420 @@
+[gd_scene load_steps=16 format=3 uid="uid://dcly6o53o5qrj"]
+
+[ext_resource type="PackedScene" uid="uid://cv462jya3p4p7" path="res://Assets/KayKit_Mini-Game-Variety-Pack/tileMedium_teamRed.gltf.glb" id="1_hulxh"]
+[ext_resource type="PackedScene" uid="uid://vu1qr6wc36yd" path="res://Assets/KayKit_Mini-Game-Variety-Pack/tileSmall_teamRed.gltf.glb" id="2_5nrsq"]
+[ext_resource type="PackedScene" uid="uid://d38fcp56tqn0v" path="res://Assets/KayKit_Mini-Game-Variety-Pack/tileSlopeLowMedium._teamRed.gltf.glb" id="3_y4uw4"]
+[ext_resource type="PackedScene" uid="uid://c3wpsfwk4k3mn" path="res://Assets/KayKit_Mini-Game-Variety-Pack/tileLarge_teamYellow.gltf.glb" id="4_gq2n8"]
+[ext_resource type="PackedScene" uid="uid://c71sshxvswqse" path="res://Assets/KayKit_Mini-Game-Variety-Pack/tileSmall_teamYellow.gltf.glb" id="5_jo6dq"]
+[ext_resource type="PackedScene" uid="uid://dcoxwp7d5j0" path="res://Assets/KayKit_Mini-Game-Variety-Pack/tileSlopeLowMedium_teamBlue.gltf.glb" id="6_vj3v6"]
+[ext_resource type="PackedScene" uid="uid://cra5kw1x3rxx0" path="res://Assets/KayKit_Mini-Game-Variety-Pack/tileMedium_teamBlue.gltf.glb" id="7_f6uit"]
+[ext_resource type="PackedScene" uid="uid://dhgephh18gf8y" path="res://Assets/KayKit_Mini-Game-Variety-Pack/tileSmall_teamBlue.gltf.glb" id="8_0vmf0"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_hlbn2"]
+size = Vector3(21, 2, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_j7vkg"]
+size = Vector3(4, 2, 0.980957)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_sw0d7"]
+size = Vector3(2, 2, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_57kb3"]
+size = Vector3(1, 2, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_6gkeq"]
+size = Vector3(11, 1, 7)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ocdjr"]
+size = Vector3(3, 1, 7)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2qh3a"]
+size = Vector3(6, 1, 7)
+
+[node name="CrashTestLevel" type="Node3D"]
+
+[node name="Red_Floor" type="Node3D" parent="."]
+
+[node name="tileMedium_teamRed_gltf" parent="Red_Floor" instance=ExtResource("1_hulxh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
+
+[node name="tileMedium_teamRed_gltf2" parent="Red_Floor" instance=ExtResource("1_hulxh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 2)
+
+[node name="tileMedium_teamRed_gltf3" parent="Red_Floor" instance=ExtResource("1_hulxh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 4)
+
+[node name="tileMedium_teamRed_gltf4" parent="Red_Floor" instance=ExtResource("1_hulxh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, -1, 0)
+
+[node name="tileMedium_teamRed_gltf5" parent="Red_Floor" instance=ExtResource("1_hulxh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, -1, 2)
+
+[node name="tileMedium_teamRed_gltf6" parent="Red_Floor" instance=ExtResource("1_hulxh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, -1, 4)
+
+[node name="tileMedium_teamRed_gltf7" parent="Red_Floor" instance=ExtResource("1_hulxh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, -1, 0)
+
+[node name="tileMedium_teamRed_gltf8" parent="Red_Floor" instance=ExtResource("1_hulxh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, -1, 2)
+
+[node name="tileMedium_teamRed_gltf10" parent="Red_Floor" instance=ExtResource("1_hulxh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, -1, 2)
+
+[node name="tileMedium_teamRed_gltf11" parent="Red_Floor" instance=ExtResource("1_hulxh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, -1, 2)
+
+[node name="tileMedium_teamRed_gltf9" parent="Red_Floor" instance=ExtResource("1_hulxh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, -1, 4)
+
+[node name="tileSmall_teamRed_gltf8" parent="Red_Floor" instance=ExtResource("2_5nrsq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.5, -0.5, 0.5)
+
+[node name="tileSmall_teamRed_gltf9" parent="Red_Floor" instance=ExtResource("2_5nrsq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5, -0.5, 0.5)
+
+[node name="tileSmall_teamRed_gltf10" parent="Red_Floor" instance=ExtResource("2_5nrsq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.5, -0.5, 3.5)
+
+[node name="tileSmall_teamRed_gltf11" parent="Red_Floor" instance=ExtResource("2_5nrsq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5, -0.5, 3.5)
+
+[node name="tileSlopeLowMedium__teamRed_gltf" parent="Red_Floor" instance=ExtResource("3_y4uw4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, -1, 2)
+
+[node name="tileSlopeLowMedium__teamRed_gltf2" parent="Red_Floor" instance=ExtResource("3_y4uw4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, -1, 0)
+
+[node name="tileSlopeLowMedium__teamRed_gltf3" parent="Red_Floor" instance=ExtResource("3_y4uw4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, -1, 4)
+
+[node name="Red_Walls" type="Node3D" parent="."]
+
+[node name="tileSmall_teamRed_gltf" parent="Red_Walls" instance=ExtResource("2_5nrsq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -1)
+
+[node name="tileSmall_teamRed_gltf2" parent="Red_Walls" instance=ExtResource("2_5nrsq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)
+
+[node name="tileSmall_teamRed_gltf3" parent="Red_Walls" instance=ExtResource("2_5nrsq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -1)
+
+[node name="tileSmall_teamRed_gltf24" parent="Red_Walls" instance=ExtResource("2_5nrsq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -1)
+
+[node name="tileSmall_teamRed_gltf25" parent="Red_Walls" instance=ExtResource("2_5nrsq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 5)
+
+[node name="tileSmall_teamRed_gltf4" parent="Red_Walls" instance=ExtResource("2_5nrsq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -1)
+
+[node name="tileSmall_teamRed_gltf5" parent="Red_Walls" instance=ExtResource("2_5nrsq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, -1)
+
+[node name="tileSmall_teamRed_gltf6" parent="Red_Walls" instance=ExtResource("2_5nrsq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -1)
+
+[node name="tileSmall_teamRed_gltf14" parent="Red_Walls" instance=ExtResource("2_5nrsq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 5)
+
+[node name="tileSmall_teamRed_gltf19" parent="Red_Walls" instance=ExtResource("2_5nrsq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5)
+
+[node name="tileSmall_teamRed_gltf20" parent="Red_Walls" instance=ExtResource("2_5nrsq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 5)
+
+[node name="tileSmall_teamRed_gltf21" parent="Red_Walls" instance=ExtResource("2_5nrsq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 5)
+
+[node name="tileSmall_teamRed_gltf22" parent="Red_Walls" instance=ExtResource("2_5nrsq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 5)
+
+[node name="tileSmall_teamRed_gltf23" parent="Red_Walls" instance=ExtResource("2_5nrsq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 5)
+
+[node name="tileSmall_teamRed_gltf10" parent="Red_Walls" instance=ExtResource("2_5nrsq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 0)
+
+[node name="tileSmall_teamRed_gltf7" parent="Red_Walls" instance=ExtResource("2_5nrsq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, -0.5)
+
+[node name="tileSmall_teamRed_gltf8" parent="Red_Walls" instance=ExtResource("2_5nrsq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0, 0.5)
+
+[node name="tileSmall_teamRed_gltf9" parent="Red_Walls" instance=ExtResource("2_5nrsq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, 1)
+
+[node name="tileSmall_teamRed_gltf11" parent="Red_Walls" instance=ExtResource("2_5nrsq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 0, 1)
+
+[node name="tileSmall_teamRed_gltf12" parent="Red_Walls" instance=ExtResource("2_5nrsq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 0, 2)
+
+[node name="tileSmall_teamRed_gltf13" parent="Red_Walls" instance=ExtResource("2_5nrsq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 0, 3)
+
+[node name="tileSmall_teamRed_gltf15" parent="Red_Walls" instance=ExtResource("2_5nrsq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, 3)
+
+[node name="tileSmall_teamRed_gltf16" parent="Red_Walls" instance=ExtResource("2_5nrsq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0, 3.5)
+
+[node name="tileSmall_teamRed_gltf17" parent="Red_Walls" instance=ExtResource("2_5nrsq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 4)
+
+[node name="tileSmall_teamRed_gltf18" parent="Red_Walls" instance=ExtResource("2_5nrsq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, 4.5)
+
+[node name="Yellow_Floor" type="Node3D" parent="."]
+
+[node name="tileLarge_teamYellow_gltf" parent="Yellow_Floor" instance=ExtResource("4_gq2n8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, -1, 2)
+
+[node name="Yellow_Walls" type="Node3D" parent="."]
+
+[node name="tileSmall_teamYellow_gltf" parent="Yellow_Walls" instance=ExtResource("5_jo6dq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, -0.5, -1)
+
+[node name="tileSmall_teamYellow_gltf2" parent="Yellow_Walls" instance=ExtResource("5_jo6dq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, -0.5, -1)
+
+[node name="tileSmall_teamYellow_gltf3" parent="Yellow_Walls" instance=ExtResource("5_jo6dq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, -0.5, -1)
+
+[node name="tileSmall_teamYellow_gltf4" parent="Yellow_Walls" instance=ExtResource("5_jo6dq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, -0.5, -1)
+
+[node name="tileSmall_teamYellow_gltf5" parent="Yellow_Walls" instance=ExtResource("5_jo6dq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, -0.5, -1)
+
+[node name="tileSmall_teamYellow_gltf6" parent="Yellow_Walls" instance=ExtResource("5_jo6dq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, -0.5, -1)
+
+[node name="tileSmall_teamYellow_gltf7" parent="Yellow_Walls" instance=ExtResource("5_jo6dq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, -0.5, -1)
+
+[node name="tileSmall_teamYellow_gltf8" parent="Yellow_Walls" instance=ExtResource("5_jo6dq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, -0.5, 5)
+
+[node name="tileSmall_teamYellow_gltf9" parent="Yellow_Walls" instance=ExtResource("5_jo6dq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, -0.5, 5)
+
+[node name="tileSmall_teamYellow_gltf10" parent="Yellow_Walls" instance=ExtResource("5_jo6dq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, -0.5, 5)
+
+[node name="tileSmall_teamYellow_gltf11" parent="Yellow_Walls" instance=ExtResource("5_jo6dq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, -0.5, 5)
+
+[node name="tileSmall_teamYellow_gltf12" parent="Yellow_Walls" instance=ExtResource("5_jo6dq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, -0.5, 5)
+
+[node name="tileSmall_teamYellow_gltf13" parent="Yellow_Walls" instance=ExtResource("5_jo6dq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, -0.5, 5)
+
+[node name="tileSmall_teamYellow_gltf14" parent="Yellow_Walls" instance=ExtResource("5_jo6dq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, -0.5, 5)
+
+[node name="Blue_Floor" type="Node3D" parent="."]
+
+[node name="tileSlopeLowMedium_teamBlue_gltf" parent="Blue_Floor" instance=ExtResource("6_vj3v6")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 10, -1, 2)
+
+[node name="tileSlopeLowMedium_teamBlue_gltf2" parent="Blue_Floor" instance=ExtResource("6_vj3v6")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 10, -1, 0)
+
+[node name="tileSlopeLowMedium_teamBlue_gltf3" parent="Blue_Floor" instance=ExtResource("6_vj3v6")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 10, -1, 4)
+
+[node name="tileMedium_teamBlue_gltf" parent="Blue_Floor" instance=ExtResource("7_f6uit")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 12, -1, 4)
+
+[node name="tileMedium_teamBlue_gltf2" parent="Blue_Floor" instance=ExtResource("7_f6uit")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 12, -1, 2)
+
+[node name="tileMedium_teamBlue_gltf3" parent="Blue_Floor" instance=ExtResource("7_f6uit")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 12, -1, 0)
+
+[node name="tileMedium_teamBlue_gltf4" parent="Blue_Floor" instance=ExtResource("7_f6uit")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 14, -1, 4)
+
+[node name="tileMedium_teamBlue_gltf5" parent="Blue_Floor" instance=ExtResource("7_f6uit")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 14, -1, 2)
+
+[node name="tileMedium_teamBlue_gltf6" parent="Blue_Floor" instance=ExtResource("7_f6uit")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 14, -1, 0)
+
+[node name="tileMedium_teamBlue_gltf7" parent="Blue_Floor" instance=ExtResource("7_f6uit")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 16, -1, 4)
+
+[node name="tileMedium_teamBlue_gltf8" parent="Blue_Floor" instance=ExtResource("7_f6uit")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 16, -1, 2)
+
+[node name="tileMedium_teamBlue_gltf10" parent="Blue_Floor" instance=ExtResource("7_f6uit")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 18, -1, 2)
+
+[node name="tileMedium_teamBlue_gltf11" parent="Blue_Floor" instance=ExtResource("7_f6uit")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 20, -1, 2)
+
+[node name="tileMedium_teamBlue_gltf9" parent="Blue_Floor" instance=ExtResource("7_f6uit")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 16, -1, 0)
+
+[node name="tileSmall_teamBlue_gltf24" parent="Blue_Floor" instance=ExtResource("8_0vmf0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.5, -0.5, 3.5)
+
+[node name="tileSmall_teamBlue_gltf25" parent="Blue_Floor" instance=ExtResource("8_0vmf0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.5, -0.5, 3.5)
+
+[node name="tileSmall_teamBlue_gltf26" parent="Blue_Floor" instance=ExtResource("8_0vmf0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.5, -0.5, 0.5)
+
+[node name="tileSmall_teamBlue_gltf27" parent="Blue_Floor" instance=ExtResource("8_0vmf0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.5, -0.5, 0.5)
+
+[node name="Blue_Walls" type="Node3D" parent="."]
+
+[node name="tileSmall_teamBlue_gltf" parent="Blue_Walls" instance=ExtResource("8_0vmf0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, 5)
+
+[node name="tileSmall_teamBlue_gltf24" parent="Blue_Walls" instance=ExtResource("8_0vmf0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 5)
+
+[node name="tileSmall_teamBlue_gltf25" parent="Blue_Walls" instance=ExtResource("8_0vmf0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, -1)
+
+[node name="tileSmall_teamBlue_gltf2" parent="Blue_Walls" instance=ExtResource("8_0vmf0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 5)
+
+[node name="tileSmall_teamBlue_gltf3" parent="Blue_Walls" instance=ExtResource("8_0vmf0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 0, 5)
+
+[node name="tileSmall_teamBlue_gltf4" parent="Blue_Walls" instance=ExtResource("8_0vmf0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 0, 5)
+
+[node name="tileSmall_teamBlue_gltf5" parent="Blue_Walls" instance=ExtResource("8_0vmf0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, 5)
+
+[node name="tileSmall_teamBlue_gltf6" parent="Blue_Walls" instance=ExtResource("8_0vmf0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 0, 5)
+
+[node name="tileSmall_teamBlue_gltf12" parent="Blue_Walls" instance=ExtResource("8_0vmf0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, -1)
+
+[node name="tileSmall_teamBlue_gltf13" parent="Blue_Walls" instance=ExtResource("8_0vmf0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, -1)
+
+[node name="tileSmall_teamBlue_gltf14" parent="Blue_Walls" instance=ExtResource("8_0vmf0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 0, -1)
+
+[node name="tileSmall_teamBlue_gltf15" parent="Blue_Walls" instance=ExtResource("8_0vmf0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 0, -1)
+
+[node name="tileSmall_teamBlue_gltf16" parent="Blue_Walls" instance=ExtResource("8_0vmf0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, -1)
+
+[node name="tileSmall_teamBlue_gltf17" parent="Blue_Walls" instance=ExtResource("8_0vmf0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 0, -1)
+
+[node name="tileSmall_teamBlue_gltf10" parent="Blue_Walls" instance=ExtResource("8_0vmf0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17, 0, 4.5)
+
+[node name="tileSmall_teamBlue_gltf18" parent="Blue_Walls" instance=ExtResource("8_0vmf0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17, 0, -0.5)
+
+[node name="tileSmall_teamBlue_gltf11" parent="Blue_Walls" instance=ExtResource("8_0vmf0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19, 0, 3.5)
+
+[node name="tileSmall_teamBlue_gltf19" parent="Blue_Walls" instance=ExtResource("8_0vmf0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19, 0, 0.5)
+
+[node name="tileSmall_teamBlue_gltf7" parent="Blue_Walls" instance=ExtResource("8_0vmf0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 0, 4)
+
+[node name="tileSmall_teamBlue_gltf20" parent="Blue_Walls" instance=ExtResource("8_0vmf0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 0, 0)
+
+[node name="tileSmall_teamBlue_gltf8" parent="Blue_Walls" instance=ExtResource("8_0vmf0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, 3)
+
+[node name="tileSmall_teamBlue_gltf21" parent="Blue_Walls" instance=ExtResource("8_0vmf0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, 1)
+
+[node name="tileSmall_teamBlue_gltf9" parent="Blue_Walls" instance=ExtResource("8_0vmf0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21, 0, 3)
+
+[node name="tileSmall_teamBlue_gltf22" parent="Blue_Walls" instance=ExtResource("8_0vmf0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21, 0, 1)
+
+[node name="tileSmall_teamBlue_gltf23" parent="Blue_Walls" instance=ExtResource("8_0vmf0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21, 0, 2)
+
+[node name="Wall_Collision_Objects" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Wall_Collision_Objects"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0.5, -1)
+shape = SubResource("BoxShape3D_hlbn2")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Wall_Collision_Objects"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0.5, 5)
+shape = SubResource("BoxShape3D_hlbn2")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="Wall_Collision_Objects"]
+transform = Transform3D(0.866025, 0, 0.5, 0, 1, 0, -0.5, 0, 0.866025, 18.0654, 0.5, 3.94759)
+shape = SubResource("BoxShape3D_j7vkg")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="Wall_Collision_Objects"]
+transform = Transform3D(0.866025, 0, -0.5, 0, 1, 0, 0.5, 0, 0.866025, 18.0654, 0.5, -0.0524142)
+shape = SubResource("BoxShape3D_j7vkg")
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="Wall_Collision_Objects"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.5, 0.5, 1)
+shape = SubResource("BoxShape3D_sw0d7")
+
+[node name="CollisionShape3D6" type="CollisionShape3D" parent="Wall_Collision_Objects"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.5, 0.5, 3)
+shape = SubResource("BoxShape3D_sw0d7")
+
+[node name="CollisionShape3D7" type="CollisionShape3D" parent="Wall_Collision_Objects"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21, 0.5, 2)
+shape = SubResource("BoxShape3D_57kb3")
+
+[node name="CollisionShape3D8" type="CollisionShape3D" parent="Wall_Collision_Objects"]
+transform = Transform3D(-0.866025, 0, -0.5, 0, 1, 0, 0.5, 0, -0.866025, -5.81308, 0.5, 0.0104829)
+shape = SubResource("BoxShape3D_j7vkg")
+
+[node name="CollisionShape3D9" type="CollisionShape3D" parent="Wall_Collision_Objects"]
+transform = Transform3D(-0.866025, 0, 0.5, 0, 1, 0, -0.5, 0, -0.866025, -5.81308, 0.5, 4.01048)
+shape = SubResource("BoxShape3D_j7vkg")
+
+[node name="CollisionShape3D10" type="CollisionShape3D" parent="Wall_Collision_Objects"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -8.24766, 0.5, 2.95807)
+shape = SubResource("BoxShape3D_sw0d7")
+
+[node name="CollisionShape3D11" type="CollisionShape3D" parent="Wall_Collision_Objects"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -8.24766, 0.5, 0.958069)
+shape = SubResource("BoxShape3D_sw0d7")
+
+[node name="CollisionShape3D12" type="CollisionShape3D" parent="Wall_Collision_Objects"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -8.74766, 0.5, 1.95807)
+shape = SubResource("BoxShape3D_57kb3")
+
+[node name="Floor_Collision_Objects" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor_Collision_Objects"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5, 0, 2)
+shape = SubResource("BoxShape3D_6gkeq")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Floor_Collision_Objects"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.5, 0, 2)
+shape = SubResource("BoxShape3D_6gkeq")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="Floor_Collision_Objects"]
+transform = Transform3D(0.965926, 0.258819, 0, -0.258819, 0.965926, 0, 0, 0, 1, 2.32158, -0.373696, 2)
+shape = SubResource("BoxShape3D_ocdjr")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="Floor_Collision_Objects"]
+transform = Transform3D(-0.965926, -0.258819, -8.74228e-08, -0.258819, 0.965926, 0, 8.44439e-08, 2.26267e-08, -1, 9.7, -0.374, 2)
+shape = SubResource("BoxShape3D_ocdjr")
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="Floor_Collision_Objects"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, -0.5, 2)
+shape = SubResource("BoxShape3D_2qh3a")
