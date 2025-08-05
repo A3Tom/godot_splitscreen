@@ -1,3 +1,11 @@
 [gd_scene format=3 uid="uid://cave8myqebtja"]
 
 [node name="Player" type="Node3D"]
+
+[node name="Rig" type="Node3D" parent="."]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
