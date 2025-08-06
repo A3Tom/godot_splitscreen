@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://dhnbsresxowoj"]
+[gd_scene load_steps=8 format=3 uid="uid://dhnbsresxowoj"]
 
 [ext_resource type="Texture2D" uid="uid://chx2n1cdgweon" path="res://Assets/Skybox/kloppenheim_06_puresky.jpg" id="1_lxeyr"]
 [ext_resource type="PackedScene" uid="uid://dcly6o53o5qrj" path="res://scenes/CrashTestLevel.tscn" id="2_670ub"]
 [ext_resource type="PackedScene" uid="uid://b3860aw2tqxqu" path="res://scenes/Characters/Mage.tscn" id="3_pqptv"]
+[ext_resource type="PackedScene" uid="uid://ck5gsormy6mu6" path="res://scenes/UI.tscn" id="4_i188y"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_3cxkq"]
 panorama = ExtResource("1_lxeyr")
@@ -52,8 +53,9 @@ handle_input_locally = false
 size = Vector2i(640, 720)
 render_target_update_mode = 4
 
+[node name="Control" parent="SubViewportContainer_1/SubViewport" instance=ExtResource("4_i188y")]
+
 [node name="Camera3D_p1" type="Camera3D" parent="SubViewportContainer_1/SubViewport"]
-unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 0.894389, 0.447291, 0, -0.447291, 0.894389, -0.826057, 5.04316, 12)
 
 [node name="SubViewportContainer_2" type="SubViewportContainer" parent="."]
@@ -66,6 +68,7 @@ handle_input_locally = false
 size = Vector2i(640, 720)
 render_target_update_mode = 4
 
+[node name="Control" parent="SubViewportContainer_2/SubViewport" instance=ExtResource("4_i188y")]
+
 [node name="Camera3D_p2" type="Camera3D" parent="SubViewportContainer_2/SubViewport"]
-unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 0.894389, 0.447291, 0, -0.447291, 0.894389, -0.826057, 5.04316, -55)

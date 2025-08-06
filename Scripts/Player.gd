@@ -13,7 +13,7 @@ extends CharacterBody3D
 var camera_yaw: float = 0.0
 var camera_offset: Vector3 = Vector3(0, 5, -10)
 var camera_follow_speed: float = 5.0
-var camera_rotation_speed: float = 2.0
+var camera_rotation_speed: float = 3.0
 
 @export_group("Controller variables")
 @export var device_id: int = 0
@@ -103,7 +103,9 @@ func handle_movement(delta):
 	move_direction = (cam_basis.x * move_input.x + cam_basis.z * move_input.z)
 	move_direction.y = 0
 	move_direction = move_direction.normalized()
-	player_mesh.rotation.y = lerp_angle(player_mesh.rotation.y, atan2(move_direction.x, move_direction.z), LERP_VALUE)
+	
+	if move_direction.length() > 0.01:
+		player_mesh.rotation.y = lerp_angle(player_mesh.rotation.y, atan2(move_direction.x, move_direction.z), LERP_VALUE)
 
 	movement_speed = calculate_movement_speed()
 	velocity.x = move_direction.x * movement_speed

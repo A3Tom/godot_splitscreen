@@ -1,0 +1,87 @@
+[gd_scene load_steps=4 format=3 uid="uid://cuvfkwdt884pw"]
+
+[ext_resource type="Script" path="res://Scripts/PauseMenu.gd" id="1_20e54"]
+[ext_resource type="StyleBox" uid="uid://bmtnlklsvil3t" path="res://Materials/PauseButton_Focus.tres" id="2_6ervs"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_sbg8j"]
+font_size = 31
+font_color = Color(0, 0, 0, 1)
+outline_size = 7
+outline_color = Color(0, 0.843137, 1, 1)
+
+[node name="Control" type="Control" node_paths=PackedStringArray("pause_buttons")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_20e54")
+pause_buttons = [NodePath("Panel/MarginContainer/VBoxContainer/btnContinue"), NodePath("Panel/MarginContainer/VBoxContainer/btnControllerSelect"), NodePath("Panel/MarginContainer/VBoxContainer/btnOptions"), NodePath("Panel/MarginContainer/VBoxContainer/btnExit")]
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -200.0
+offset_right = 200.0
+offset_bottom = 200.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 70
+theme_override_constants/margin_top = 55
+theme_override_constants/margin_right = 70
+theme_override_constants/margin_bottom = 55
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="Label" type="Label" parent="Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+text = "CONTINUE, CUNT!"
+label_settings = SubResource("LabelSettings_sbg8j")
+
+[node name="Control" type="Control" parent="Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="btnContinue" type="Button" parent="Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_styles/focus = ExtResource("2_6ervs")
+text = "Continue"
+
+[node name="btnControllerSelect" type="Button" parent="Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_styles/focus = ExtResource("2_6ervs")
+text = "Controller Select"
+
+[node name="btnOptions" type="Button" parent="Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_styles/focus = ExtResource("2_6ervs")
+text = "Options"
+
+[node name="btnExit" type="Button" parent="Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_colors/font_focus_color = Color(4.23551e-06, 0.903909, 0.904894, 1)
+theme_override_styles/focus = ExtResource("2_6ervs")
+text = "Exit"
