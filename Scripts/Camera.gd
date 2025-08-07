@@ -9,6 +9,7 @@ var yaw: float = 0.0
 @export var rotation_speed: float = 2.0
 
 func _process(delta):
+	
 	if target:
 		# Handle user input for camera rotation
 		if Input.is_action_pressed("camera_rotate_left"):
