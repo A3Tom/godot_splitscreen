@@ -16,7 +16,12 @@ signal player_level_up(player_id, new_level)
 signal player_ability_used(player_id, ability_name)
 signal player_item_collected(player_id, item_name)
 
+# Character Selection Signals
+signal character_selection_hover(player_id, character_id)
+signal player_character_changed(player_id, character_id)
+
 # Game Signals
 signal game_started()
 signal game_paused()
 signal game_resumed()
+signal register_playable_character(character_name, scene)

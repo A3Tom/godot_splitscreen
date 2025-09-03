@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://dhnbsresxowoj"]
+[gd_scene load_steps=9 format=3 uid="uid://dhnbsresxowoj"]
 
 [ext_resource type="Texture2D" uid="uid://chx2n1cdgweon" path="res://Assets/Skybox/kloppenheim_06_puresky.jpg" id="1_lxeyr"]
 [ext_resource type="PackedScene" uid="uid://dcly6o53o5qrj" path="res://scenes/CrashTestLevel.tscn" id="2_670ub"]
 [ext_resource type="PackedScene" uid="uid://b3860aw2tqxqu" path="res://scenes/Characters/Mage.tscn" id="3_pqptv"]
 [ext_resource type="PackedScene" uid="uid://ck5gsormy6mu6" path="res://scenes/UI.tscn" id="4_i188y"]
+[ext_resource type="Script" path="res://Scripts/Player.gd" id="4_q8usr"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_3cxkq"]
 panorama = ExtResource("1_lxeyr")
@@ -37,10 +38,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.844486, 3.78, 4.32431)
 
 [node name="Player_1" parent="Players" node_paths=PackedStringArray("playerCamera") instance=ExtResource("3_pqptv")]
 transform = Transform3D(1, 0, 1.42109e-14, 0, 1, 0, -1.42109e-14, 0, 1, 0, -2.25972, 1.90791)
+script = ExtResource("4_q8usr")
 playerCamera = NodePath("../../SubViewportContainer_1/SubViewport/Camera3D_p1")
 
 [node name="Player_2" parent="Players" node_paths=PackedStringArray("playerCamera") instance=ExtResource("3_pqptv")]
 transform = Transform3D(1, 0, 1.42109e-14, 0, 1, 0, -1.42109e-14, 0, 1, 0, -2.25972, -53.062)
+script = ExtResource("4_q8usr")
 playerCamera = NodePath("../../SubViewportContainer_2/SubViewport/Camera3D_p2")
 device_id = 1
 
