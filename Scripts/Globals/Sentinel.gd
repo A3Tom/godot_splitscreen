@@ -125,6 +125,9 @@ func get_next_dictionary_id(dictionary: Dictionary):
 func get_player_by_device(device_id):
 	return player_device_map.get(device_id, null)
 
+func get_device_by_player(player_id):
+	return players.get(player_id, null).device_id if players.has(player_id) else -7777
+
 func get_player_character(player_id):
 	if players.has(player_id):
 		return players[player_id].character_id

@@ -1,12 +1,14 @@
 extends CharacterBody3D
 
+@export_group("Player variables")
+@export var player_id: int
+
 @export_group("Movement variables")
 @export var walk_speed: float = 7.0
 @export var run_speed: float = 12.0
 @export var jump_strength: float = 15.0
 @export var gravity: float = 50.0
 @export var deadzone: float = 0.2
-
 
 @export_group("Camera variables")
 @export var playerCamera: Camera3D
@@ -15,12 +17,8 @@ var camera_offset: Vector3 = Vector3(0, 5, -10)
 var camera_follow_speed: float = 5.0
 var camera_rotation_speed: float = 3.0
 
-@export_group("Controller variables")
-@export var device_id: int = 0
-
 @onready var player_mesh: Node3D = $Rig
 @onready var animator: AnimationTree = $AnimationTree
-
 
 const ANIMATION_BLEND: float = 7.0
 const LERP_VALUE: float = 0.15
@@ -30,6 +28,12 @@ var movement_speed: float = walk_speed
 var is_shooting: bool = false
 var is_run_toggled: bool = false
 var is_running: bool = false
+var device_id: int = -7777
+
+func _ready():
+	GlobalSignals.player_device_changed.connect(_on_player_device_changed)
+	GlobalSignals.player_removed.connect(_on_player_removed)
+	device_id = Sentinel.get_device_by_player(player_id)
 
 func _physics_process(delta):
 	handle_movement(delta)
@@ -55,6 +59,14 @@ func _input(event):
 		
 	if event.is_action_pressed("toggle_run"):
 		is_run_toggled = !is_run_toggled
+
+func _on_player_device_changed(_player_id: int, new_device_id: int):
+	if player_id == _player_id:
+		device_id = new_device_id
+
+func _on_player_removed(_player_id: int):
+	if player_id == _player_id:
+		device_id = -7777
 
 func is_listenable_input_event(event: InputEvent) -> bool:
 	if event.device != device_id:
