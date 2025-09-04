@@ -9,7 +9,7 @@ enum SceneName {
 const SCENE_MAP = {
     SceneName.MAIN_MENU: "res://scenes/MainMenu.tscn",
     SceneName.PLAYER_SELECT: "res://scenes/PlayerSetup.tscn",
-    SceneName.CRASH_TEST_LEVEL: "res://scenes/CrashTestLevel.tscn"
+    SceneName.CRASH_TEST_LEVEL: "res://scenes/World.tscn"
 }
 
 func _ready():
@@ -17,3 +17,6 @@ func _ready():
     GlobalSignals.register_playable_character.emit('Rinkus', preload("res://scenes/Characters/Mage.tscn"))
     GlobalSignals.register_playable_character.emit('Joobly', preload("res://scenes/Characters/Druid.tscn"))
     GlobalSignals.register_playable_character.emit('Kloompa', preload("res://scenes/Characters/Rogue.tscn"))
+
+func get_scene_path(scene_name: SceneName) -> String:
+    return SCENE_MAP.get(scene_name, "")

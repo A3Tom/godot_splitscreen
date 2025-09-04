@@ -94,6 +94,14 @@ func handle_input_lobby(player_id, event):
 	if event.is_action_pressed("ui_cancel"):
 		player_ui_status[player_id] = PlayerJoinState.CHARACTER_SELECT
 		show_character_select_ui(player_id)
+	elif event.is_action_pressed("ui_start"):
+		print("Player %d is ready!" % player_id)
+		if is_everyone_ready():
+			print("All players are ready! Starting game...")
+			var next_scene = Altuin.get_scene_path(Altuin.SceneName.CRASH_TEST_LEVEL)
+			get_tree().change_scene_to_file(next_scene)
+	else:
+		print("Unhandled input in lobby: ", event)
 
 func get_previous_character_id(player_id):
 	var character_id = player_character_map[player_id]
@@ -139,3 +147,9 @@ func hide_player_ui(player_id):
 		p2_JoinUI.visible = false
 		p2_CharacterSelectUI.visible = false
 		p2_LobbyUI.visible = false
+
+func is_everyone_ready():
+	for player_id in player_ui_status.keys():
+		if player_ui_status[player_id] == PlayerJoinState.CHARACTER_SELECT:
+			return false
+	return true

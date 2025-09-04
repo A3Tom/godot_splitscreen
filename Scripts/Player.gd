@@ -11,7 +11,7 @@ extends CharacterBody3D
 @export var deadzone: float = 0.2
 
 @export_group("Camera variables")
-@export var playerCamera: Camera3D
+@export var player_camera: Camera3D
 var camera_yaw: float = 0.0
 var camera_offset: Vector3 = Vector3(0, 5, -10)
 var camera_follow_speed: float = 5.0
@@ -92,8 +92,8 @@ func handle_camera(delta):
 
 	var rotated_offset = self.camera_offset.rotated(Vector3.UP, camera_yaw)
 	var desired_position = global_transform.origin + rotated_offset
-	playerCamera.global_transform.origin = playerCamera.global_transform.origin.lerp(desired_position, self.camera_follow_speed * delta)
-	playerCamera.look_at(global_transform.origin, Vector3.UP)
+	player_camera.global_transform.origin = player_camera.global_transform.origin.lerp(desired_position, self.camera_follow_speed * delta)
+	player_camera.look_at(global_transform.origin, Vector3.UP)
 
 func handle_movement(delta):
 	var move_input: Vector3 = Vector3.ZERO
@@ -111,7 +111,7 @@ func handle_movement(delta):
 		#print("Movement input from keyboard (device_id: -1)")
 
 	var move_direction: Vector3 = Vector3.ZERO
-	var cam_basis = playerCamera.global_transform.basis
+	var cam_basis = player_camera.global_transform.basis
 	move_direction = (cam_basis.x * move_input.x + cam_basis.z * move_input.z)
 	move_direction.y = 0
 	move_direction = move_direction.normalized()
