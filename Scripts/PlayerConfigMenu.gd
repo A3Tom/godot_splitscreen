@@ -68,7 +68,7 @@ func handle_input_waiting_for_join(player_id, event):
 
 func handle_input_character_select(player_id, event):
 	if event.is_action_pressed("ui_accept"):
-		GlobalSignals.player_character_changed.emit(player_id, event.device)
+		GlobalSignals.player_character_changed.emit(player_id, player_character_map[player_id])
 		player_ui_status[player_id] = PlayerJoinState.LOBBY
 		show_lobby_ui(player_id)
 	elif event.is_action_pressed("ui_cancel"):

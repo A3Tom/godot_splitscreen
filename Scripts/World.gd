@@ -2,6 +2,11 @@ extends Node3D
 
 @onready var camera_3d_p1 := %Camera3D_p1
 
+func _input(event):
+	if event.is_action_pressed("ui_start"):
+		var next_scene = Altuin.get_scene_path(Altuin.SceneName.PLAYER_SELECT)
+		get_tree().change_scene_to_file(next_scene)
+
 func _ready():
 	var player_count = Sentinel.get_player_count()
 	print("Number of players: ", player_count)

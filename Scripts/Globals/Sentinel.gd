@@ -48,12 +48,8 @@ func _on_player_character_changed(player_id, character_id):
 		print("Character change for player %d not relevant." % player_id)
 
 func _on_character_selection_hover_changed(player_id, character_id):
-	if players.has(player_id):
-		player_character_map[player_id] = character_id
-		var character_name = playable_characters.get(character_id, null).name if playable_characters.has(character_id) else "Unknown"
-		print("Player %d is hovering over character %d (%s)" % [player_id, character_id, character_name])
-	else:
-		print("Character hover change for player %d not relevant." % player_id)
+	var character_name = playable_characters.get(character_id, null).name if playable_characters.has(character_id) else "Unknown"
+	print("Player %d is hovering over character %d (%s)" % [player_id, character_id, character_name])
 
 func _on_player_removed(player_id):
 	if players.has(player_id):

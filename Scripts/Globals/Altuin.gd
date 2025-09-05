@@ -8,7 +8,7 @@ enum SceneName {
 
 const SCENE_MAP = {
     SceneName.MAIN_MENU: "res://scenes/MainMenu.tscn",
-    SceneName.PLAYER_SELECT: "res://scenes/PlayerSetup.tscn",
+    SceneName.PLAYER_SELECT: "res://scenes/Menus/PlayerSetup.tscn",
     SceneName.CRASH_TEST_LEVEL: "res://scenes/World.tscn"
 }
 
