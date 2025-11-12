@@ -1,0 +1,64 @@
+[gd_scene load_steps=9 format=3 uid="uid://8w2at7qw3jx3"]
+
+[ext_resource type="Script" uid="uid://b73vvnv784q07" path="res://scripts/PlayerSetup.gd" id="1_b637d"]
+[ext_resource type="PackedScene" uid="uid://biv3e45l4necg" path="res://scenes/characters/CharacterSelected.tscn" id="2_kfsa4"]
+[ext_resource type="Script" uid="uid://bup8d7la281jy" path="res://scripts/CharacterSelected.gd" id="2_ut5sy"]
+[ext_resource type="PackedScene" uid="uid://durb7gqh8ny2r" path="res://scenes/menus/PlayerConfigMenu.tscn" id="4_tjt4n"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_lskv8"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_c2p6q"]
+albedo_color = Color(0.188371, 0.188371, 0.188371, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_npaad"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_kg682"]
+
+[node name="PlayerSetup" type="Node3D"]
+script = ExtResource("1_b637d")
+
+[node name="Structure" type="Node3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Structure"]
+transform = Transform3D(94.08, 0, 0, 0, 0.1, 0, 0, 0, 94.08, 0, -0.0180564, 0)
+mesh = SubResource("BoxMesh_lskv8")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_c2p6q")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Structure"]
+transform = Transform3D(0.273, 0, 0, 0, 8.316, 0, 0, 0, 36.0672, -16.92, 4, 2)
+mesh = SubResource("BoxMesh_npaad")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="Structure"]
+transform = Transform3D(-5.20166e-09, 0, 32.76, 0, 8.316, 0, -0.119, 0, -1.43198e-06, -0.54, 4, -15.68)
+mesh = SubResource("BoxMesh_kg682")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="Structure"]
+transform = Transform3D(-5.20166e-09, 0, 32.76, 0, 8.316, 0, -0.119, 0, -1.43198e-06, -0.54, 4, 19.68)
+mesh = SubResource("BoxMesh_kg682")
+skeleton = NodePath("../..")
+
+[node name="Characters" type="Node3D" parent="."]
+
+[node name="CharacterSelected" parent="Characters" instance=ExtResource("2_kfsa4")]
+transform = Transform3D(2.98023e-08, 0, 1, 0, 1, 0, -1, 0, 2.98023e-08, -8.27414, 1.77992, 5.01151)
+script = ExtResource("2_ut5sy")
+spotlight_colour = Color(0, 0.494118, 1, 1)
+
+[node name="CharacterSelected2" parent="Characters" instance=ExtResource("2_kfsa4")]
+transform = Transform3D(2.98023e-08, 0, 1, 0, 1, 0, -1, 0, 2.98023e-08, -8.27414, 1.77992, 0.06949)
+script = ExtResource("2_ut5sy")
+spotlight_colour = Color(0.968659, 0, 0.335497, 1)
+player_id = 1
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(-5.96046e-08, 0, 1, 0, 1, 0, -1, 0, -5.96046e-08, -3.79618, 3.39138, 2.55843)
+projection = 1
+current = true
+size = 5.72711
+near = 0.001
+far = 78.7
+
+[node name="PlayerConfigMenu" parent="." instance=ExtResource("4_tjt4n")]

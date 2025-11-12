@@ -17,10 +17,10 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-GlobalSignals="*res://Scripts/Globals/Signals.gd"
-Sentinel="*res://Scripts/Globals/Sentinel.gd"
-Altuin="*res://Scripts/Globals/Altuin.gd"
-SceneSwitcher="*res://Scripts/Globals/SceneSwitcher.gd"
+GlobalSignals="*res://scripts/Globals/Signals.gd"
+Sentinel="*res://scripts/Globals/Sentinel.gd"
+Altuin="*res://scripts/Globals/Altuin.gd"
+SceneSwitcher="*res://scripts/Globals/SceneSwitcher.gd"
 
 [display]
 

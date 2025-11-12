@@ -1,0 +1,60 @@
+[gd_scene load_steps=6 format=3 uid="uid://biv3e45l4necg"]
+
+[sub_resource type="Environment" id="Environment_8ikmf"]
+volumetric_fog_enabled = true
+
+[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_0e6f5"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_ort3v"]
+seed = 245
+frequency = 0.0186
+
+[sub_resource type="NoiseTexture3D" id="NoiseTexture3D_pxpg5"]
+resource_local_to_scene = true
+noise = SubResource("FastNoiseLite_ort3v")
+
+[sub_resource type="FogMaterial" id="FogMaterial_dvcax"]
+height_falloff = 517633.0
+edge_fade = 0.428709
+density_texture = SubResource("NoiseTexture3D_pxpg5")
+
+[node name="CharacterSelected" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_8ikmf")
+camera_attributes = SubResource("CameraAttributesPractical_0e6f5")
+
+[node name="ColourfulSpotlight" type="SpotLight3D" parent="."]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 5, 5)
+light_color = Color(0, 0, 0, 1)
+light_energy = 9.309
+light_volumetric_fog_energy = 12.277
+spot_range = 11.057
+spot_angle = 10.98
+spot_angle_attenuation = 0.965936
+
+[node name="SpotLight3D3" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 0, 5, 8)
+light_energy = 2.814
+light_volumetric_fog_energy = 0.0
+spot_range = 17.274
+spot_attenuation = 0.784584
+spot_angle = 10.98
+spot_angle_attenuation = 1.23114
+
+[node name="SpotLight3D2" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 2.98023e-08, 0, -2.98023e-08, 1, 0, 1.91149, 11)
+light_energy = 11.218
+light_indirect_energy = 5.04
+light_volumetric_fog_energy = 3.535
+spot_range = 13.0571
+spot_angle = 5.69578
+spot_angle_attenuation = 0.965936
+
+[node name="FogVolume" type="FogVolume" parent="."]
+size = Vector3(6.97698, 5.93707, 5.86979)
+material = SubResource("FogMaterial_dvcax")
+
+[node name="CharacterSpawnPoint" type="Node3D" parent="."]
+unique_name_in_owner = true

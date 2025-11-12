@@ -1,0 +1,335 @@
+[gd_scene load_steps=7 format=3 uid="uid://durb7gqh8ny2r"]
+
+[ext_resource type="Script" path="res://scripts/PlayerConfigMenu.gd" id="1_5my6r"]
+[ext_resource type="LabelSettings" uid="uid://dttwtx61q4tpy" path="res://materials/MainMenu_Player_Label.tres" id="2_s0iw6"]
+[ext_resource type="Script" path="res://scripts/CharacterSelectUI.gd" id="3_w5mp5"]
+[ext_resource type="Texture2D" uid="uid://da6kwukny2uqm" path="res://assets/buttons/Button - PS Directional Arrow Left.png" id="4_h11yd"]
+[ext_resource type="Texture2D" uid="uid://chvrwq143o33t" path="res://assets/buttons/Button - PS Directional Arrow Right.png" id="5_l2cad"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_1ss7w"]
+font_size = 27
+outline_size = 6
+outline_color = Color(0, 0, 0, 1)
+
+[node name="PlayerConfigMenu" type="Control" node_paths=PackedStringArray("p1_JoinUI", "p1_CharacterSelectUI", "p1_LobbyUI", "p2_JoinUI", "p2_CharacterSelectUI", "p2_LobbyUI")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_5my6r")
+p1_JoinUI = NodePath("MarginContainer/HBoxContainer/P1_UI/P1_Join_UI")
+p1_CharacterSelectUI = NodePath("MarginContainer/HBoxContainer/P1_UI/P1_CharacterSelect_UI")
+p1_LobbyUI = NodePath("MarginContainer/HBoxContainer/P1_UI/P1_Lobby_UI")
+p2_JoinUI = NodePath("MarginContainer/HBoxContainer/P2_UI/P2_Join_UI")
+p2_CharacterSelectUI = NodePath("MarginContainer/HBoxContainer/P2_UI/P2_CharacterSelect_UI")
+p2_LobbyUI = NodePath("MarginContainer/HBoxContainer/P2_UI/P2_Lobby_UI")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 40
+theme_override_constants/margin_bottom = 40
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="P1_UI" type="Control" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="P1_Join_UI" type="Control" parent="MarginContainer/HBoxContainer/P1_UI"]
+anchors_preset = 0
+offset_left = 4.0
+offset_right = 600.0
+offset_bottom = 640.0
+size_flags_horizontal = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/HBoxContainer/P1_UI/P1_Join_UI"]
+layout_mode = 0
+offset_left = 4.0
+offset_right = 600.0
+offset_bottom = 640.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_top = 25
+theme_override_constants/margin_bottom = 100
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/P1_UI/P1_Join_UI/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/P1_UI/P1_Join_UI/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Player 1"
+label_settings = ExtResource("2_s0iw6")
+horizontal_alignment = 1
+
+[node name="Control" type="Control" parent="MarginContainer/HBoxContainer/P1_UI/P1_Join_UI/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="lblJoin" type="RichTextLabel" parent="MarginContainer/HBoxContainer/P1_UI/P1_Join_UI/MarginContainer/VBoxContainer"]
+layout_mode = 2
+bbcode_enabled = true
+text = "[center] [font_size=40]Press [img=4,4]res://assets/buttons/ps_x.png[/img] / [img=4,4]res://assets/buttons/xbox_a.png[/img] to join"
+fit_content = true
+
+[node name="P1_CharacterSelect_UI" type="Control" parent="MarginContainer/HBoxContainer/P1_UI" node_paths=PackedStringArray("character_name_label")]
+anchors_preset = 0
+offset_left = 4.0
+offset_right = 600.0
+offset_bottom = 640.0
+size_flags_horizontal = 3
+script = ExtResource("3_w5mp5")
+character_name_label = NodePath("MarginContainer/MarginContainer2/HBoxContainer/MarginContainer/lblCharacterName")
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/HBoxContainer/P1_UI/P1_CharacterSelect_UI"]
+layout_mode = 0
+offset_left = 4.0
+offset_right = 600.0
+offset_bottom = 640.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_top = 95
+theme_override_constants/margin_bottom = 25
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/P1_UI/P1_CharacterSelect_UI/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 2
+
+[node name="Label2" type="Label" parent="MarginContainer/HBoxContainer/P1_UI/P1_CharacterSelect_UI/MarginContainer/VBoxContainer"]
+modulate = Color(0.99178, 0.414782, 3.85046e-07, 1)
+layout_mode = 2
+text = "Select a wee cunt"
+label_settings = SubResource("LabelSettings_1ss7w")
+horizontal_alignment = 1
+
+[node name="Control" type="Control" parent="MarginContainer/HBoxContainer/P1_UI/P1_CharacterSelect_UI/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="lblJoin" type="RichTextLabel" parent="MarginContainer/HBoxContainer/P1_UI/P1_CharacterSelect_UI/MarginContainer/VBoxContainer"]
+modulate = Color(1, 1, 1, 0.490196)
+layout_mode = 2
+bbcode_enabled = true
+text = "[left][font_size=20]Press [img=3,3]res://assets/buttons/ps_o.png[/img] to quit"
+fit_content = true
+
+[node name="MarginContainer2" type="MarginContainer" parent="MarginContainer/HBoxContainer/P1_UI/P1_CharacterSelect_UI/MarginContainer"]
+layout_mode = 2
+theme_override_constants/margin_top = 230
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/HBoxContainer/P1_UI/P1_CharacterSelect_UI/MarginContainer/MarginContainer2"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 21
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/HBoxContainer/P1_UI/P1_CharacterSelect_UI/MarginContainer/MarginContainer2/HBoxContainer"]
+custom_minimum_size = Vector2(35, 35)
+layout_mode = 2
+size_flags_horizontal = 0
+texture = ExtResource("4_h11yd")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/HBoxContainer/P1_UI/P1_CharacterSelect_UI/MarginContainer/MarginContainer2/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_bottom = 3
+
+[node name="lblCharacterName" type="Label" parent="MarginContainer/HBoxContainer/P1_UI/P1_CharacterSelect_UI/MarginContainer/MarginContainer2/HBoxContainer/MarginContainer"]
+modulate = Color(0.99178, 0.414782, 3.85046e-07, 1)
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+text = "Wee Jimmy"
+label_settings = SubResource("LabelSettings_1ss7w")
+horizontal_alignment = 1
+
+[node name="TextureRect2" type="TextureRect" parent="MarginContainer/HBoxContainer/P1_UI/P1_CharacterSelect_UI/MarginContainer/MarginContainer2/HBoxContainer"]
+custom_minimum_size = Vector2(35, 35)
+layout_mode = 2
+size_flags_horizontal = 0
+texture = ExtResource("5_l2cad")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="P1_Lobby_UI" type="Control" parent="MarginContainer/HBoxContainer/P1_UI"]
+anchors_preset = 0
+offset_left = 4.0
+offset_right = 600.0
+offset_bottom = 640.0
+size_flags_horizontal = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/HBoxContainer/P1_UI/P1_Lobby_UI"]
+layout_mode = 0
+offset_left = 4.0
+offset_right = 600.0
+offset_bottom = 640.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_bottom = 25
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/P1_UI/P1_Lobby_UI/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 2
+
+[node name="lblJoin" type="RichTextLabel" parent="MarginContainer/HBoxContainer/P1_UI/P1_Lobby_UI/MarginContainer/VBoxContainer"]
+modulate = Color(1, 1, 1, 0.490196)
+layout_mode = 2
+bbcode_enabled = true
+text = "[left][font_size=20]Press [img=3,3]res://assets/buttons/ps_o.png[/img] to quit"
+fit_content = true
+
+[node name="P2_UI" type="Control" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="P2_Join_UI" type="Control" parent="MarginContainer/HBoxContainer/P2_UI"]
+anchors_preset = 0
+offset_right = 596.0
+offset_bottom = 640.0
+size_flags_horizontal = 3
+
+[node name="MarginContainer_p2" type="MarginContainer" parent="MarginContainer/HBoxContainer/P2_UI/P2_Join_UI"]
+layout_mode = 0
+offset_left = 4.0
+offset_right = 600.0
+offset_bottom = 640.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_top = 25
+theme_override_constants/margin_bottom = 100
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/P2_UI/P2_Join_UI/MarginContainer_p2"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/P2_UI/P2_Join_UI/MarginContainer_p2/VBoxContainer"]
+layout_mode = 2
+text = "Player 2"
+label_settings = ExtResource("2_s0iw6")
+horizontal_alignment = 1
+
+[node name="Control" type="Control" parent="MarginContainer/HBoxContainer/P2_UI/P2_Join_UI/MarginContainer_p2/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="lblJoin" type="RichTextLabel" parent="MarginContainer/HBoxContainer/P2_UI/P2_Join_UI/MarginContainer_p2/VBoxContainer"]
+layout_mode = 2
+bbcode_enabled = true
+text = "[center] [font_size=40]Press [img=4,4]res://assets/buttons/ps_x.png[/img] / [img=4,4]res://assets/buttons/xbox_a.png[/img] to join"
+fit_content = true
+
+[node name="P2_CharacterSelect_UI" type="Control" parent="MarginContainer/HBoxContainer/P2_UI" node_paths=PackedStringArray("character_name_label")]
+anchors_preset = 0
+offset_right = 596.0
+offset_bottom = 640.0
+size_flags_horizontal = 3
+script = ExtResource("3_w5mp5")
+character_name_label = NodePath("MarginContainer/MarginContainer2/HBoxContainer/MarginContainer/lblCharacterName")
+player_id = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/HBoxContainer/P2_UI/P2_CharacterSelect_UI"]
+layout_mode = 0
+offset_right = 596.0
+offset_bottom = 640.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_top = 95
+theme_override_constants/margin_bottom = 25
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/P2_UI/P2_CharacterSelect_UI/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 2
+
+[node name="Label2" type="Label" parent="MarginContainer/HBoxContainer/P2_UI/P2_CharacterSelect_UI/MarginContainer/VBoxContainer"]
+modulate = Color(0.99178, 0.414782, 3.85046e-07, 1)
+layout_mode = 2
+text = "Select a wee cunt"
+label_settings = SubResource("LabelSettings_1ss7w")
+horizontal_alignment = 1
+
+[node name="Control" type="Control" parent="MarginContainer/HBoxContainer/P2_UI/P2_CharacterSelect_UI/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="lblJoin" type="RichTextLabel" parent="MarginContainer/HBoxContainer/P2_UI/P2_CharacterSelect_UI/MarginContainer/VBoxContainer"]
+modulate = Color(1, 1, 1, 0.490196)
+layout_mode = 2
+bbcode_enabled = true
+text = "[right][font_size=20]Press [img=3,3]res://assets/buttons/ps_o.png[/img] to quit"
+fit_content = true
+
+[node name="MarginContainer2" type="MarginContainer" parent="MarginContainer/HBoxContainer/P2_UI/P2_CharacterSelect_UI/MarginContainer"]
+layout_mode = 2
+theme_override_constants/margin_top = 230
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/HBoxContainer/P2_UI/P2_CharacterSelect_UI/MarginContainer/MarginContainer2"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 21
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/HBoxContainer/P2_UI/P2_CharacterSelect_UI/MarginContainer/MarginContainer2/HBoxContainer"]
+custom_minimum_size = Vector2(35, 35)
+layout_mode = 2
+size_flags_horizontal = 0
+texture = ExtResource("4_h11yd")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/HBoxContainer/P2_UI/P2_CharacterSelect_UI/MarginContainer/MarginContainer2/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_bottom = 3
+
+[node name="lblCharacterName" type="Label" parent="MarginContainer/HBoxContainer/P2_UI/P2_CharacterSelect_UI/MarginContainer/MarginContainer2/HBoxContainer/MarginContainer"]
+modulate = Color(0.99178, 0.414782, 3.85046e-07, 1)
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+text = "Wee Jimmy"
+label_settings = SubResource("LabelSettings_1ss7w")
+horizontal_alignment = 1
+
+[node name="TextureRect2" type="TextureRect" parent="MarginContainer/HBoxContainer/P2_UI/P2_CharacterSelect_UI/MarginContainer/MarginContainer2/HBoxContainer"]
+custom_minimum_size = Vector2(35, 35)
+layout_mode = 2
+size_flags_horizontal = 0
+texture = ExtResource("5_l2cad")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="P2_Lobby_UI" type="Control" parent="MarginContainer/HBoxContainer/P2_UI"]
+anchors_preset = 0
+offset_right = 596.0
+offset_bottom = 640.0
+size_flags_horizontal = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/HBoxContainer/P2_UI/P2_Lobby_UI"]
+layout_mode = 0
+offset_right = 596.0
+offset_bottom = 640.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_bottom = 25
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/P2_UI/P2_Lobby_UI/MarginContainer"]
+layout_mode = 2
+alignment = 2
+
+[node name="lblJoin" type="RichTextLabel" parent="MarginContainer/HBoxContainer/P2_UI/P2_Lobby_UI/MarginContainer/VBoxContainer"]
+modulate = Color(1, 1, 1, 0.490196)
+layout_mode = 2
+bbcode_enabled = true
+text = "[right][font_size=20]Press [img=3,3]res://assets/buttons/ps_o.png[/img] to quit"
+fit_content = true
