@@ -2,4 +2,8 @@
 .godot/
 .vscode/
 
+# Assets folder
+assets/
+
 **/*.*.uid
+
