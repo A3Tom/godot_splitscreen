@@ -45,8 +45,10 @@ func _input(event):
 
 	if player_ui_state == PlayerJoinState.WAITING_FOR_JOIN:
 		handle_input_waiting_for_join(player_id, event)
+
 	elif player_ui_state == PlayerJoinState.CHARACTER_SELECT:
 		handle_input_character_select(player_id, event)
+		
 	elif player_ui_state == PlayerJoinState.LOBBY:
 		handle_input_lobby(player_id, event)
 

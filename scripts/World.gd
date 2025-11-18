@@ -1,6 +1,7 @@
 extends Node3D
 
-@onready var camera_3d_p1 := %Camera3D_p1
+#@onready var camera_3d_p1 := %Camera3D_p1
+@onready var viewport_controller: ViewportController = %Viewports
 
 func _input(event):
 	if event.is_action_pressed("ui_start"):
@@ -20,13 +21,14 @@ func _instantiate_player_scene(player_id):
 	var player_scene = Sentinel.get_player_character_scene(player_id)
 	if player_scene:
 		var player_instance = player_scene.instantiate()
+		player_instance.name = 'player_%d' % player_id
 		# Attach the Player.gd script
 		var player_script = load("res://scripts/Player.gd")
 		player_instance.set_script(player_script)
 		if "player_id" in player_instance:
 			player_instance.player_id = player_id
 		if "player_camera" in player_instance:
-			player_instance.player_camera = camera_3d_p1
+			player_instance.player_camera = viewport_controller.player_cameras[player_id]
 		var players_node = _get_players_node()
 		players_node.add_child(player_instance)
 		print("Instantiated scene for Player %d" % player_id)
