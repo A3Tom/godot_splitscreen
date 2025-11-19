@@ -66,6 +66,7 @@ func handle_input_waiting_for_join(player_id, event):
 	if event.is_action_pressed("ui_accept"):
 		GlobalSignals.player_added.emit(player_id, event.device)
 		player_ui_status[player_id] = PlayerJoinState.CHARACTER_SELECT
+		GlobalSignals.character_selection_hover.emit(player_id, 0)
 		show_character_select_ui(player_id)
 
 func handle_input_character_select(player_id, event):

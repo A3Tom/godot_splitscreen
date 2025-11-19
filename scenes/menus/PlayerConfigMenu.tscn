@@ -1,8 +1,8 @@
 [gd_scene load_steps=7 format=3 uid="uid://durb7gqh8ny2r"]
 
-[ext_resource type="Script" path="res://scripts/PlayerConfigMenu.gd" id="1_5my6r"]
+[ext_resource type="Script" uid="uid://nfcga4yc6snu" path="res://scripts/PlayerConfigMenu.gd" id="1_5my6r"]
 [ext_resource type="LabelSettings" uid="uid://dttwtx61q4tpy" path="res://materials/MainMenu_Player_Label.tres" id="2_s0iw6"]
-[ext_resource type="Script" path="res://scripts/CharacterSelectUI.gd" id="3_w5mp5"]
+[ext_resource type="Script" uid="uid://c1pd48iageeqk" path="res://scripts/CharacterSelectUI.gd" id="3_w5mp5"]
 [ext_resource type="Texture2D" uid="uid://da6kwukny2uqm" path="res://assets/buttons/Button - PS Directional Arrow Left.png" id="4_h11yd"]
 [ext_resource type="Texture2D" uid="uid://chvrwq143o33t" path="res://assets/buttons/Button - PS Directional Arrow Right.png" id="5_l2cad"]
 
